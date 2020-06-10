@@ -1,0 +1,393 @@
+<div class="contenedor col-s-12">
+  <div class="contenedor1 col-s-12">
+    <!-- mensaje de aviso -->
+    <div  *ngIf="cargarse; else alerta2">
+    </div>
+    
+    <ng-template #alerta2>
+      <div  *ngIf="transformar; else alerta22">
+        <div class="alert alert-success alertaok" role="alert">
+          Datos validos correctamente
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #alerta22>
+      <div  *ngIf="validacion; else alerta222">
+        <div class="alert alert-success alertaok" role="alert">
+          Descomprimido correctamente
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #alerta222>
+      <div  *ngIf="asignar; else alerta2222">
+        <div class="alert alert-success alertaok" role="alert">
+         Convertido Correctamente
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #alerta2222>
+     
+    </ng-template>
+
+    <!-- fin del mensaje de aviso -->
+
+    <!-- titulo de la pagina -->
+      <div  *ngIf="cargarse; else titulo1">
+        <h1>SUBIENDO INFORMACIÓN</h1>
+      </div>
+    <ng-template #titulo1>
+      <div *ngIf="transformar; else titulo2">
+        <h1>CARGANDO INFORMACIÓN</h1>
+      </div>
+    </ng-template>
+
+    <ng-template #titulo2>
+      <div *ngIf="validacion; else titulo3">  
+        <h1>TRANSFORMANDO ARCHIVO</h1>
+      </div>
+    </ng-template>
+
+    <ng-template #titulo3>
+      <div *ngIf="asignar; else titulo4">
+        <h1>VALIDANDO INFORMACIÓN</h1>
+      </div>
+    </ng-template>
+
+    <ng-template #titulo4>
+        <h1>TERMINO EL PROCESO</h1>
+    </ng-template>
+
+  </div>
+
+    <div class="contenedor2 col-s-12">
+      <ng-template #mensajeok>
+        <!-- IMAGEN DE LA CARGA DE LOS ARCHIVOS -->
+        <div class="okmensaje">
+          <img src="../../../../assets/images/ok.png" style="width: 14%;">
+        </div>
+      </ng-template>
+      <!-- Seleccionar el Archivo de los datos -->
+      <div class="container"  *ngIf="cargarse; else spinner">
+        <div class="row" >
+          <div class="col-sm">
+            <!--One of three columns-->
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Seleccione la Empresa</option>
+              <option value="1">Secrex</option>
+              <option value="2">Mapfre</option>
+              <option value="3">Rimac</option>
+              <option value="4">Inter Seguro</option>
+              <option value="5">Clinica San Pablo</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Seleccione la Campaña</option>
+              <option value="1">Campaña 1</option>
+              <option value="2">Campaña 2</option>
+              <option value="3">Campaña 3</option>
+              <option value="4">Campaña 4</option>
+            </select>
+          </div>
+          <div class="col-sm ">
+            <!--One of three columns-->
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+              <label class="custom-file-label" for="inputGroupFile04">Seleccionar Archivo</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin del Proceso de Seleccionar Archivo -->      
+      <!-- Siguiente pantalla de las pagina web -->
+      <ng-template #spinner>
+        <!-- IMAGEN DE LA CARGA DE LOS ARCHIVOS -->
+        <div *ngIf="asignar; else mensajeok" >
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+      <!-- Fin de la pagina 2  -->
+    </div>
+  
+    <!-- FLECHAS QUE SE CARGAN CONSECUTIVAMENTE -->
+
+    <div class="contenedor3 col-s-12">
+      <div class="row">
+        <div class="col" >
+          <div id="imagen">
+            <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="cargarse; else imagen1">
+            <ng-template #imagen1>
+              <img src="../../../assets/images/Iconos/fecha1.png">
+            </ng-template>
+          <div class="texto_centrado">Subir Archivo</div>
+        </div>
+
+        <div class="col cajaprincipal plomo" *ngIf="cargarse; else texto1">
+          <div class="cajarelleno plomos"></div>
+          <div>
+            <table  class="cajatexto">
+              <tr>
+                  <td>Tiempo estimado</td>
+                  <td>:0min</td>
+              </tr>
+              <tr>
+                  <td>Porcentaje de carga</td>
+                  <td>:0%</td>
+              </tr>
+              <tr>
+                <td>Tamaño de Archivo</td>
+                <td>:0mb</td>
+              </tr>
+           </table>
+          </div>
+        </div>
+
+          <ng-template #texto1>
+            <div class="col cajaprincipal primero ">
+              <div class="cajarelleno primeros"></div>
+                <div>
+                  <table  class="cajatexto">
+                    <tr>
+                        <td>Tiempo estimado</td>
+                        <td>:0min</td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de carga</td>
+                        <td>:0%</td>
+                    </tr>
+                    <tr>
+                      <td>Tamaño de Archivo</td>
+                      <td>:0mb</td>
+                    </tr>
+                 </table>
+                </div>
+              </div>
+          </ng-template>
+
+        </div>
+        
+        <div class="col">
+          <div id="imagen">
+            <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="transformar else imagen2">
+            <ng-template #imagen2>
+              <img src="../../../assets/images/Iconos/fecha2.png">
+            </ng-template>
+            <div class="texto_centrado">Transformar</div>
+          </div>
+          <div class="col cajaprincipal plomo " *ngIf="transformar; else texto2">
+            <div class="cajarelleno plomos"></div>
+            <div>
+              <table  class="cajatexto">
+                <tr>
+                    <td>Copiar Archivos</td>
+                    <td>:0%</td>
+                </tr>
+                <tr>
+                    <td>Converción TXT</td>
+                    <td>:0%</td>
+                </tr>
+                <tr>
+                  <td>Mover archivo a Historicos</td>
+                  <td>:0%</td>
+                </tr>
+             </table>
+            </div>
+          </div>
+
+          <ng-template #texto2>
+            <div class="col cajaprincipal segundo ">
+              <div class="cajarelleno segundos"></div>
+              <div>
+                <table  class="cajatexto">
+                  <tr>
+                      <td>Copiar Archivos</td>
+                      <td>:0%</td>
+                  </tr>
+                  <tr>
+                      <td>Converción TXT</td>
+                      <td>:0%</td>
+                  </tr>
+                  <tr>
+                    <td>Mover archivo a Historicos</td>
+                    <td>:0%</td>
+                  </tr>
+               </table>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+
+        <div class="col">
+          <div id="imagen">
+            <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="validacion else imagen3">
+            <ng-template #imagen3>
+              <img src="../../../assets/images/Iconos/fecha3.png">
+            </ng-template>
+            <div class="texto_centrado">Validacion</div>
+          </div>
+
+          <div class="col cajaprincipal plomo " *ngIf="validacion; else texto3">
+            <div class="cajarelleno plomos"></div>
+            <div>
+              <table  class="cajatexto">
+                <tr>
+                    <td>Subir Archivo BD</td>
+                    <td>:0%</td>
+                </tr>
+                <tr>
+                    <td>Ejecutar Validación</td>
+                    <td>:0%</td>
+                </tr>
+                <tr>
+                  <td>Generardor de Errores</td>
+                  <td>:0</td>
+                </tr>
+             </table>
+            </div>           
+          </div>
+
+          <ng-template #texto3>
+            <div class="col cajaprincipal tercero ">
+              <div class="cajarelleno terceros"></div>
+              <div>
+                <table  class="cajatexto">
+                  <tr>
+                      <td>Subir Archivo BD</td>
+                      <td>:0%</td>
+                  </tr>
+                  <tr>
+                      <td>Ejecutar Validación</td>
+                      <td>:0%</td>
+                  </tr>
+                  <tr>
+                    <td>Generardor de Errores</td>
+                    <td>:0</td>
+                  </tr>
+               </table>
+              </div>           
+            </div>
+          </ng-template>
+        </div>
+
+        <div class="col" id="imagen">
+          <div id="imagen">
+            <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="asignar; else imagen4">
+            <ng-template #imagen4>
+              <img src="../../../assets/images/Iconos/fecha4.png">
+            </ng-template>
+            <div class="texto_centrado">Asignar</div>
+          </div>
+          <div class="col cajaprincipal plomo " *ngIf="asignar; else texto4">
+            <div class="cajarelleno plomos"></div>
+            <div>
+              <table  class="cajatexto">
+                <tr>
+                    <td>Distribuir a Campaña</td>
+                    <td>:0min</td>
+                </tr>
+             </table>
+            </div>
+          </div>        
+        </div>
+      </div>
+      <ng-template #texto4>
+        <div class="col cajaprincipal cuarto ">
+          <div class="cajarelleno cuartos"></div>
+          <div>
+            <table  class="cajatexto">
+              <tr>
+                  <td>Distribuir a Campaña</td>
+                  <td>:0min</td>
+              </tr>
+           </table>
+          </div>
+        </div>  
+      </ng-template>
+    </div>
+
+<!-- fin de la prueba de codigo -->
+
+    <div class="row pie col-s-12"><!-- BOTON DE ATRAS -->
+      
+
+      <div class="col" id="boton">
+        <div *ngIf="cargarse;else botones2">
+        </div>  
+
+        <ng-template #botones2>
+          <div *ngIf="transformar;else botones22">
+            <button class="btn btn-danger" type="button"  (click)="cargarse = !cargarse">
+              Atras
+            </button>
+          </div>
+        </ng-template>
+
+        <ng-template #botones22>
+          <div *ngIf="validacion;else botones222">
+            <button class="btn btn-danger" type="button"  (click)="transformar = !transformar">
+              Atras
+            </button>
+          </div>
+        </ng-template>
+        
+        <ng-template #botones222>
+           <div *ngIf="asignar;else botones2222">
+            <button class="btn btn-danger" type="button"  (click)="validacion = !validacion">
+              Atras
+            </button>
+            </div> 
+        </ng-template>
+        <ng-template #botones2222>
+            <button class="btn btn-danger" type="button"  (click)="asignar = !asignar">
+              Atras
+            </button>
+        </ng-template>
+      </div>
+
+      <!-- ENTRADA DE LOS ARCHIVOS -->
+      <div class="col" id="boton"><!-- BOTON DE SIGUIENTE -->
+        
+        <div *ngIf="cargarse;else botones1">
+          <button class="btn btn-success" type="button" (click)="cargarse = !cargarse">
+            Subir Archivo
+        </button>
+        </div>
+
+        <ng-template #botones1>
+          <div *ngIf="transformar;else botones11">
+            <button class="btn btn-success" type="button"  (click)="transformar = !transformar">
+              Transformar Archivo
+            </button>
+        </div>          
+      </ng-template>
+
+      <ng-template #botones11>
+        <div *ngIf="validacion;else botones111">
+          <button class="btn btn-success" type="button"  (click)="validacion = !validacion">
+            Validacion Archivo
+          </button>
+      </div>          
+    </ng-template>
+
+        <ng-template #botones111>
+          <div *ngIf="asignar;else botones1111">
+            <button class="btn btn-success" type="button"  (click)="asignar = !asignar">
+              Asignar Archivo
+            </button>
+        </div>   
+        </ng-template>
+
+        <ng-template #botones1111>
+
+        </ng-template>
+      </div>
+    </div>
+</div> <!-- fINAL DE CONTENEDOR -->

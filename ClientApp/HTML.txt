@@ -1,0 +1,368 @@
+<div class="contenedor">
+    <div class="contenedor1">
+      <div *ngIf="cargarse; else titulo1">
+        <h1>SUBIENDO INFORMACIÓN</h1>
+      </div>
+
+      <ng-template #titulo1>
+        <div *ngIf="transformar; else titulo2">
+          <h1>CARGANDO INFORMACIÓN</h1>
+        </div>
+      </ng-template>
+
+      <ng-template #titulo2>
+        <div *ngIf="validacion; else titulo3">
+          <h1>TRANSFORMANDO ARCHIVO</h1>
+        </div>
+      </ng-template>
+
+      <ng-template #titulo3>
+        <div *ngIf="asignar; else titulo4">
+          <h1>VALIDANDO INFORMACIÓN</h1>
+        </div>
+      </ng-template>
+
+      <ng-template #titulo4>
+          <h1>TERMINO EL PROCESO</h1>
+      </ng-template>
+
+
+    </div>
+
+      <div class="contenedor2">
+        <ng-template #mensajeok>
+          <!-- IMAGEN DE LA CARGA DE LOS ARCHIVOS -->
+          <div class="okmensaje">
+            <img src="../../../../assets/images/ok.png" style="width: 14%;">
+          </div>
+        </ng-template>
+        <!-- Seleccionar el Archivo de los datos -->
+        <div class="container"  id="controladores" *ngIf="cargarse; else spinner">
+          <div class="row">
+            <div class="col-sm">
+              <!--One of three columns-->
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Seleccione la Empresa</option>
+                <option value="1">Secrex</option>
+                <option value="2">Mapfre</option>
+                <option value="3">Rimac</option>
+                <option value="4">Inter Seguro</option>
+                <option value="5">Clinica San Pablo</option>
+              </select>
+            </div>
+            <div class="col-sm">
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Seleccione la Campaña</option>
+                <option value="1">Campaña 1</option>
+                <option value="2">Campaña 2</option>
+                <option value="3">Campaña 3</option>
+                <option value="4">Campaña 4</option>
+              </select>
+            </div>
+            <div class="col-sm">
+              <!--One of three columns-->
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                <label class="custom-file-label" for="inputGroupFile04">Seleccionar Archivo</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin del Proceso de Seleccionar Archivo -->      
+        <br>
+        <!-- Siguiente pantalla de las pagina web -->
+        <ng-template #spinner>
+          <!-- IMAGEN DE LA CARGA DE LOS ARCHIVOS -->
+          <div *ngIf="asignar; else mensajeok" >
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+
+        <!-- Fin de la pagina 2  -->
+      </div>
+    
+      <!-- FLECHAS QUE SE CARGAN CONSECUTIVAMENTE -->
+
+      <div class="contenedor3">
+        <div class="row">
+          <div class="col" >
+            <div id="imagen">
+              <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="cargarse; else imagen1">
+              <ng-template #imagen1>
+                <img src="../../../assets/images/Iconos/fecha1.png">
+              </ng-template>
+            <div class="texto_centrado">Subir Archivo</div>
+          </div>
+          <div class="col plomo " id="cajaprincipal" *ngIf="cargarse; else texto1">
+            <div class="cajarelleno plomos"></div>
+              <div class=" ow-cols-2 ">
+                <div class="col cajatexto">
+                  <ul class="lista">
+                    <li>Tiempo estimado</li>
+                    <li>Porcentaje de carga</li>
+                    <li>Tamaño de Archivo</li>
+                  </ul>
+                </div>
+                <div class="col cajadatos">
+                  <ul class="lista">
+                    <li>:0min</li>
+                    <li>:0%</li>
+                    <li>:0mb</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <ng-template #texto1>
+              <div class="col primero " id="cajaprincipal">
+                <div class="cajarelleno primeros"></div>
+                  <div class=" ow-cols-2 ">
+                    <div class="col cajatexto">
+                      <ul class="lista">
+                        <li>Tiempo estimado</li>
+                        <li>Porcentaje de carga</li>
+                        <li>Tamaño de Archivo</li>
+                      </ul>
+                    </div>
+                    <div class="col cajadatos">
+                      <ul class="lista">
+                        <li>:2min</li>
+                        <li>:25%</li>
+                        <li>:15mb</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </ng-template>
+
+          </div>
+          
+          <div class="col">
+            <div id="imagen">
+              <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="transformar; else imagen2">
+              <ng-template #imagen2>
+                <img src="../../../assets/images/Iconos/fecha2.png">
+              </ng-template>
+              <div class="texto_centrado">Transformar</div>
+            </div>
+            <div class="col plomo " id="cajaprincipal" *ngIf="transformar; else texto2">
+              <div class="cajarelleno plomos"></div>
+              <div class=" ow-cols-2 ">
+                <div class="col cajatexto">
+                  <ul class="lista">
+                    <li>Copiar Archivos</li>
+                    <li>Converción TXT</li>
+                    <li>Mover archivo a Historicos</li>
+                  </ul>
+                </div>
+                <div class="col cajadatos">
+                  <ul class="lista">
+                    <li>:0%</li>
+                    <li>:0%</li>
+                    <li>:0%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <ng-template #texto2>
+              <div class="col segundo " id="cajaprincipal">
+                <div class="cajarelleno segundos"></div>
+                <div class=" ow-cols-2 ">
+                  <div class="col cajatexto">
+                    <ul class="lista">
+                      <li>Copiar Archivos</li>
+                      <li>Converción TXT</li>
+                      <li>Mover archivo a Historicos</li>
+                    </ul>
+                  </div>
+                  <div class="col cajadatos">
+                    <ul class="lista">
+                      <li>:20%</li>
+                      <li>:25%</li>
+                      <li>:25%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+
+          <div class="col">
+            <div id="imagen">
+              <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="validacion else imagen3">
+              <ng-template #imagen3>
+                <img src="../../../assets/images/Iconos/fecha3.png">
+              </ng-template>
+              <div class="texto_centrado">Validacion</div>
+            </div>
+            <div class="col plomo " id="cajaprincipal" *ngIf="validacion; else texto3">
+              <div class="cajarelleno plomos"></div>
+              <div class=" ow-cols-2 ">
+                <div class="col cajatexto">
+                  <ul class="lista">
+                    <li>Subir Archivo BD</li>
+                    <li>Ejecutar Validación</li>
+                    <li>Generardor de Errores</li>
+                  </ul>
+                </div>
+                <div class="col cajadatos">
+                  <ul class="lista">
+                    <li>:0%</li>
+                    <li>:0%</li>
+                    <li>:0</li>
+                  </ul>
+                </div>
+              </div>           
+            </div>
+
+            <ng-template #texto3>
+              <div class="col tercero " id="cajaprincipal">
+                <div class="cajarelleno terceros"></div>
+                <div class=" ow-cols-2 ">
+                  <div class="col cajatexto">
+                    <ul class="lista">
+                      <li>Subir Archivo BD</li>
+                      <li>Ejecutar Validación</li>
+                      <li>Generardor de Errores</li>
+                    </ul>
+                  </div>
+                  <div class="col cajadatos">
+                    <ul class="lista">
+                      <li>:30%</li>
+                      <li>:5min</li>
+                      <li>:0</li>
+                    </ul>
+                  </div>
+                </div>           
+              </div>
+            </ng-template>
+          </div>
+
+          <div class="col" id="imagen">
+            <div id="imagen">
+              <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="asignar; else imagen4">
+              <ng-template #imagen4>
+                <img src="../../../assets/images/Iconos/fecha4.png">
+              </ng-template>
+              <div class="texto_centrado">Asignar</div>
+            </div>
+            <div class="col plomo " id="cajaprincipal" *ngIf="asignar; else texto4">
+              <div class="cajarelleno plomos"></div>
+              <div class=" ow-cols-2 ">
+                <div class="col cajatexto">
+                  <ul class="lista">
+                    <li>Distribuir a Campaña</li>
+                  </ul>
+                </div>  
+                <div class="col cajadatos">
+                  <ul class="lista">
+                    <li>:0min</li>
+                  </ul>
+                </div>
+              </div>
+            </div>        
+          </div>
+        </div>
+        <ng-template #texto4>
+          <div class="col cuarto " id="cajaprincipal">
+            <div class="cajarelleno cuartos"></div>
+            <div class=" ow-cols-2 ">
+              <div class="col cajatexto">
+                <ul class="lista">
+                  <li>Distribuir a Campaña</li>
+                </ul>
+              </div>
+              <div class="col cajadatos">
+                <ul class="lista">
+                  <li>:2min</li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+        </ng-template>
+      </div>
+
+<!-- fin de la prueba de codigo -->
+
+      <div class="row">
+        
+        <div class="col" id="boton">
+          <div *ngIf="cargarse; else botones2"></div>
+
+          <ng-template #botones2>
+            <div *ngIf="transformar;else botones22">
+              <button class="btn btn-danger" type="button"  (click)="cargarse = !cargarse">
+                Atras
+              </button>
+            </div>
+          </ng-template>
+
+          <ng-template #botones22>
+            <div *ngIf="validacion;else botones222">
+              <button class="btn btn-danger" type="button"  (click)="transformar = !transformar">
+                Atras
+              </button>
+            </div>
+          </ng-template>
+
+          <ng-template #botones222> 
+            <div *ngIf="asignar;else botones2222">
+              <button class="btn btn-danger" type="button"  (click)="validacion = !validacion">
+                Atras
+              </button>
+            </div>
+          </ng-template>
+
+          <ng-template #botones2222>
+              <button class="btn btn-danger" type="button"  (click)="asignar = !asignar">
+                Atras
+              </button>
+          </ng-template>
+
+        </div>
+
+        <!-- ENTRADA DE LOS ARCHIVOS -->
+        <div class="col" id="boton">
+          
+          <div *ngIf="cargarse;else botones1">
+            <button class="btn btn-success" type="button" (click)="cargarse = !cargarse">
+              Subir Archivo
+          </button>
+          </div>
+
+          <ng-template #botones1>
+            <div *ngIf="transformar;else botones11">
+              <button class="btn btn-success" type="button"  (click)="transformar = !transformar">
+                Transformar Archivo
+              </button>
+            </div>
+          </ng-template>
+
+          <ng-template #botones11>
+            <div *ngIf="validacion;else botones111">
+              <button class="btn btn-success" type="button"  (click)="validacion = !validacion">
+                Validacion Archivo
+              </button>
+            </div>
+          </ng-template>
+
+          <ng-template #botones111>
+            <div *ngIf="asignar;else botones1111">
+              <button class="btn btn-success" type="button"  (click)="asignar = !asignar">
+                Asignar Archivo
+              </button>
+            </div>
+          </ng-template>
+
+          <ng-template #botones1111>
+            
+          </ng-template>
+
+        </div>
+      </div>
+ </div>

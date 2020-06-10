@@ -1,0 +1,7 @@
+cargarse: boolean = true;
+  
+transformar: boolean = true;
+
+validacion: boolean = true;
+
+asignar:boolean =true;

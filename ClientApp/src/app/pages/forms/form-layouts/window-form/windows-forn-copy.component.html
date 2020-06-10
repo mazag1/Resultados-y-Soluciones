@@ -1,0 +1,89 @@
+
+ <div class="form-group row">
+
+ <form class="form-inline">  
+ <p> Cliente: </p>  
+ <input type="email" nbInput  placeholder="Jose Andres Perez Gomez" disabled style="margin-left: 15px; width: 1000px;">
+</form>
+
+</div>
+
+
+<div class="form-group row">
+
+<form class="form-inline">  
+  <p> Asunto: </p>  
+  <input type="email" nbInput  placeholder="Volver a llamar al cliente" style="margin-left: 15px; width: 1000px;">
+ </form>
+
+</div>
+
+
+
+<div class="form-group row">
+  
+  <form class="form-inline">  
+    <p style="margin-right: 10px;"> Comienzo: </p>  
+    
+   
+        <input nbInput
+               placeholder="Seleccione el dia"
+               [nbDatepicker]="formpicker" >
+        <nb-datepicker #formpicker></nb-datepicker>
+
+        <input type="time" name="hora" min="8:00" max="21:00" 
+        style="
+        margin-left: 10px;
+        border-radius: 0.25rem;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        padding: 0.4375rem 1rem;
+        background-color: #edf1f7;
+        border-color: #e4e9f2;
+        color: #222b45;
+        transition-property: border, background-color, color, box-shadow;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Open Sans, sans-serif;
+        -webkit-appearance: none;
+        height: 39.6px;
+        ">
+  
+    
+   </form>
+  
+  </div>
+
+
+
+
+  <div class="form-group row">
+  
+    <form class="form-inline">  
+      
+  <nb-checkbox>Aviso: </nb-checkbox>
+
+     <input nbInput type="number"  name="timeout" min="00" max="60"
+     style="margin-left: 10px;
+     width: 100px;">
+      
+      <button _ngcontent-ahk-c425="" type="submit" nbbutton="" status="primary" _nghost-ahk-c96="" ng-reflect-status="primary" 
+      aria-disabled="false" tabindex="0" class="appearance-filled size-medium status-primary shape-rectangle nb-transition"
+      style="margin-left: 110px;">
+      <i _ngcontent-ahk-c425="" class="fas fa-save"></i><span _ngcontent-ahk-c425="" style="margin-left: 5px;"> Guardar </span></button>
+
+     </form>
+    
+    </div>
+
+
+
+
+    <div class="form-group row">
+  
+      <textarea rows="5" nbInput fullWidth shape="round" placeholder="Escribe tu mensaje"></textarea>
+      </div>
+
+
+    

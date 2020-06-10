@@ -1,0 +1,225 @@
+<div class="contenedor">
+  <div class="alert alert-danger" role="alert">
+    Validación fallida.
+  </div>
+  <div class="alert alert-warning" role="alert">
+     Ingresa de nuevo los datos.
+  </div>
+  <div class="contenedor1">
+    <h1>VALIDACIÓN DE ARCHIVOS</h1>
+  </div>
+  <div class="contenedor2">
+    <!-- IMAGEN DE LA CARGA DE LOS ARCHIVOS -->
+  
+
+      <table class="table table-hover" style="width: 80%; justify-content: center; margin-left: 100px;">
+        <thead>
+          <tr >
+            <th scope="col">id</th>
+            <th scope="col">datos1</th>
+            <th scope="col">datos2</th>
+            <th scope="col">daots3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: rgb(237,241,247);">
+            <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+          </tr>
+         
+          <tr style="background-color: rgb(247,249,252);">
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr style="background-color: rgb(255,255,255);">
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>error</td>
+            <td>@twitter</td>
+          </tr>
+          <tr style="background-color: rgb(237,241,247);">
+            <th scope="row">3</th>
+            <td>alan</td>
+            <td>error</td>
+            <td>@github</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+    <!-- TEXTO DE LA INFORMACIÓN DE LA CARGA -->
+    <div class="row">
+      <div class="col" id="informacion">
+        <!-- Tiempo estimado : 2 -->
+      </div>
+      <div class="col" id="informacion">
+        <!-- Tiempo Estimado: 2min -->
+      </div>
+      <div class="col" id="informacion">
+        <!-- Peso del Archivo: 34mb -->
+      </div>
+    </div>
+  </div>
+
+
+    <div class="contenedor3">
+      <div class="row">
+        <div class="col" >
+          <div id="imagen">
+            <img src="../../../assets/images/Iconos/fecha1.png">
+          <div class="texto_centrado">Subir Archivo</div>
+        </div>
+            <div class="col primero " id="cajaprincipal">
+              <div class="cajarelleno primeros"></div>
+                <div class=" ow-cols-2 ">
+                  <div class="col cajatexto">
+                    <ul class="lista">
+                      <li>Tiempo estimado</li>
+                      <li>Porcentaje de carga</li>
+                      <li>Tamaño de Archivo</li>
+                    </ul>
+                  </div>
+                  <div class="col cajadatos">
+                    <ul class="lista">
+                      <li>:2min</li>
+                      <li>:25%</li>
+                      <li>:15mb</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+        
+        <div class="col">
+          <div id="imagen">
+            <img src="../../../assets/images/Iconos/fecha1.png">
+            <div class="texto_centrado">Transformar</div>
+          </div>
+            <div class="col segundo " id="cajaprincipal">
+              <div class="cajarelleno segundos"></div>
+              <div class=" ow-cols-2 ">
+                <div class="col cajatexto">
+                  <ul class="lista">
+                    <li>Copiar Archivos</li>
+                    <li>Converción TXT</li>
+                    <li>Mover archivo a Historicos</li>
+                  </ul>
+                </div>
+                <div class="col cajadatos">
+                  <ul class="lista">
+                    <li>:20%</li>
+                    <li>:25%</li>
+                    <li>:25%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="col">
+          <div id="imagen">
+              <img src="../../../assets/images/Iconos/fecha3.png">
+            <div class="texto_centrado">Validacion</div>
+          </div>
+            <div class="col tercero " id="cajaprincipal">
+              <div class="cajarelleno terceros"></div>
+              <div class=" ow-cols-2 ">
+                <div class="col cajatexto">
+                  <ul class="lista">
+                    <li>Subir Archivo BD</li>
+                    <li>Ejecutar Validación</li>
+                    <li>Generardor de Errores</li>
+                  </ul>
+                </div>
+                <div class="col cajadatos">
+                  <ul class="lista">
+                    <li>:30%</li>
+                    <li>:5min</li>
+                    <li>:0</li>
+                  </ul>
+                </div>
+              </div>           
+            </div>
+        </div>
+
+        <div class="col" id="imagen">
+          <div id="imagen">
+            <img src="../../../assets/images/Iconos/fecha5.png" *ngIf="cargarse; else imagen4">
+            <ng-template #imagen4>
+              <img src="../../../assets/images/Iconos/fecha4.png">
+            </ng-template>
+            <div class="texto_centrado">Asignar</div>
+          </div>
+          <div class="col plomo " id="cajaprincipal" *ngIf="cargarse; else texto4">
+            <div class="cajarelleno plomos"></div>
+            <div class=" ow-cols-2 ">
+              <div class="col cajatexto">
+                <ul class="lista">
+                  <li>Distribuir a Campaña</li>
+                </ul>
+              </div>  
+              <div class="col cajadatos">
+                <ul class="lista">
+                  <li>:0min</li>
+                </ul>
+              </div>
+            </div>
+          </div>        
+        </div>
+      </div>
+      <ng-template #texto4>
+        <div class="col cuarto " id="cajaprincipal">
+          <div class="cajarelleno cuartos"></div>
+          <div class=" ow-cols-2 ">
+            <div class="col cajatexto">
+              <ul class="lista">
+                <li>Distribuir a Campaña</li>
+              </ul>
+            </div>
+            <div class="col cajadatos">
+              <ul class="lista">
+                <li>:2min</li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+      </ng-template>
+    </div>
+
+<!-- fin de la prueba de codigo -->
+
+    <div class="row">
+      
+      <div class="col" id="boton">
+        <div *ngIf="cargarse; else botones2"></div>
+
+        <ng-template #botones2>
+          <div *ngIf="transformar;else botones22">
+            <button class="btn btn-danger" type="button"  (click)="cargarse = !cargarse">
+              Atras
+            </button>
+          </div>
+        </ng-template>
+      </div>
+
+      <!-- ENTRADA DE LOS ARCHIVOS -->
+      
+    </div>
+        <div class="row">
+          <div class="col" id="boton">
+            <button class="btn btn-outline-primary" type="button">Atras</button>
+          </div>
+          <div class="col" id="boton">
+            <!-- ENTRADA DE LOS ARCHIVOS -->
+            <button class="btn btn-outline-success" type="button" onclick="location.href=''" disabled>Subir Archivo</button>
+          </div>
+        </div>
+</div>

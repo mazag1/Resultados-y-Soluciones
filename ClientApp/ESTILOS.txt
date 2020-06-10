@@ -1,0 +1,169 @@
+.contenedor {
+    width: 940px;
+    background-color: white;
+    height: auto;
+    margin: auto;
+    padding-top: 10px;
+  }
+  
+  .contenedor1 {
+    width: 940px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .contenedor2 {
+    width: 940px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .contenedor3 {
+    width: 940px;
+    height: 200px;
+    margin-bottom: 20px;
+    text-align:center;
+  }
+     
+  h1{
+      text-align:center;
+  }
+  
+  #boton{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 2%;
+  }
+  
+  #controladores{
+    padding-top: 7%;
+  }
+
+  #imagen{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+#imagen img{
+  width: 110%;
+}
+
+.texto_centrado{
+  position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+ul{
+  text-align: left;
+}
+
+// estilo de subir archivo
+
+#cajaprincipal{
+  height: 130px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 10px;
+}
+
+.cajarelleno{
+ height: 20px;
+}
+
+.cajatexto{
+  width: 78%;
+  float: left;
+  padding-left: 6px;
+  padding-right: 0px;
+  padding-top: 6px;
+}
+
+.cajatexto li::before{
+  content: "\26AA"; /* Insertamos el marcador */
+  // padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
+  padding-right:0px
+}
+
+.cajatexto li{
+  color: #0D0D25;
+  font-weight: normal;
+  font-family: Cambria;
+}
+
+.cajadatos li{
+  color: #0D0D25;
+  font-weight: normal;
+  font-family: Cambria;
+}
+
+.cajadatos{
+  width: 22%;
+  float: right;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 6px;
+}
+
+.plomo{
+  background-color: rgb(203, 203, 211);
+}
+
+.plomos{
+  background-color: rgb(48, 48, 49);
+}
+
+.primero{
+  background-color: #6C75F8;
+}
+
+.primeros{
+  background-color: #070F8A;
+}
+
+.segundo{
+  background-color: #AAD6F7;
+}
+
+.segundos{
+  background-color: #2BA0F7;
+}
+
+.tercero{
+  background-color: #F56D6D;
+}
+
+.terceros{
+  background-color: #EF0000;
+}
+
+.cuarto{
+  background-color: #70EB79;
+}
+
+.cuartos{
+  background-color: #01D912;
+}
+
+.lista{
+  list-style: none;
+  padding: 0;
+}
+
+
+// pagina 2
+.okmensaje{
+  text-align: center;
+}
+// spinner
+.spinner-border {
+  width: 80px;
+  height: 80px;
+  border-right-color: green;
+
+}
+

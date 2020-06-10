@@ -1,0 +1,727 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <nb-card>      
+      <nb-card-body>
+        <form>
+
+          <form class="form-inline">
+         
+
+
+            <p > Empresa:</p>
+            <nb-select selected="2" >
+              <nb-option value="1">Rimac</nb-option>
+              <nb-option value="2">Secrex</nb-option>
+              <nb-option value="2">Maphree</nb-option>
+            </nb-select>
+
+            <p > Colas:</p>
+            <nb-select selected="2" fullWidth>
+             <nb-option value="1">Contactados</nb-option>
+             <nb-option value="2">Cola 2</nb-option>
+             <nb-option value="3">Cola pedro sanchez algo</nb-option>
+           </nb-select>
+           
+          </form>
+
+
+      
+          
+          <div class="form-group row">
+            
+            
+          
+              <form class="form-inline">
+                
+                <input type="text" nbInput  placeholder="Busca aca" style="margin-left: 15px; width: 256px;">
+               
+                
+                  <nb-radio-group >
+                    <nb-radio checked >
+                      Nombre
+                    </nb-radio>
+                    <nb-radio >
+                      DNI
+                    </nb-radio>
+                    <nb-radio >
+                      Telefono
+                    </nb-radio>
+                  
+                  </nb-radio-group>
+               
+            </form>
+          </div>
+
+        </form>
+
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+             
+              <th scope="col">Codigo</th>
+              <th scope="col">Direccion del cliente</th>
+              <th scope="col">Gestion</th>
+              <th scope="col">DNI</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background-color: rgb(237,241,247);">
+              
+              <td>20201312</td>
+              <td>Alejandra ALGO Apellido2</td>
+              <td>S</td>
+              <td>72544678</td>
+              <td>
+              <button type="submit" nbButton status="primary" (click)="openWindowForm()" style="width: 20px; height: 20px;" >
+                <i class="fas fa-signal"></i>
+               </button>
+              </td>
+            </tr>
+           
+            <tr style="background-color: rgb(247,249,252);">
+              <td>20201392</td>
+              <td>Alejandro ALGO Apellido2</td>
+              <td>S</td>
+              <td>72544978</td>
+              <td>
+                <button type="submit" nbButton status="primary" (click)="openWindowForm()" style="width: 20px; height: 20px;" >
+                  <i class="fas fa-signal"></i>
+                 </button>
+                </td>
+            </tr>
+            <tr style="background-color: rgb(255,255,255);">
+              <td>20201312</td>
+              <td>Adriana ALGO Apellido2</td>
+              <td>S</td>
+              <td>72544678</td>
+              <td>
+              <button type="submit" nbButton status="primary" (click)="openWindowForm()" style="width: 20px; height: 20px;" >
+                <i class="fas fa-signal"></i>
+               </button>
+              </td>
+            </tr>
+            <tr style="background-color: rgb(237,241,247);">
+              <td>20201312</td>
+              <td>Eduardo ALGO Apellido2</td>
+              <td>S</td>
+              <td>73544678</td>
+              <td>
+              <button type="submit" nbButton status="primary" (click)="openWindowForm()" style="width: 20px; height: 20px;" >
+                <i class="fas fa-signal"></i>
+               </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <nav aria-label="...">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <span class="page-link">atras</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+              <span class="page-link">
+                2
+                <span class="sr-only">(current)</span>
+              </span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">siguiente</a>
+            </li>
+          </ul>
+        </nav>
+
+      </nb-card-body>
+      
+    </nb-card>
+
+    
+
+    <nb-card>
+      <nb-card-body>
+    
+        <nb-tabset>
+          <nb-tab tabTitle="Deuda Vencida">
+
+            <table class="table table-hover">
+              <thead>
+                <tr >
+                  <th scope="col">Producto</th>
+                  <th scope="col">Monto Capital</th>
+                  <th scope="col">Monto deuda</th>
+                  <th scope="col">Dias de mora</th>
+                  <th scope="col">Fecha vencimiento</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>seguro de vida</td>
+                  <td>139.90</td>
+                  <td>8768</td>
+                  <td>72</td>
+                  <td>10/08/2018</td>
+                </tr>
+               
+                <tr style="background-color: rgb(247,249,252);">
+                  <td>seguro de auto</td>
+                  <td>199.90</td>
+                  <td>8865</td>
+                  <td>74</td>
+                  <td>10/08/2018</td>
+                </tr>
+                <tr style="background-color: rgb(255,255,255);">
+                  <td>seguro de casa</td>
+                  <td>149.90</td>
+                  <td>8785</td>
+                  <td>75</td>
+                  <td>10/08/2020</td>
+                </tr>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>seguro de cosa</td>
+                  <td>189.90</td>
+                  <td>8765</td>
+                  <td>76</td>
+                  <td>10/08/2019</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+         
+          </nb-tab>
+
+          <nb-tab tabTitle="Detalles de deuda">
+
+            <table class="table table-hover">
+              <thead>
+                <tr >
+                 
+                  <th scope="col">Mes</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Monto pagado</th>
+                  <th scope="col">Total pagos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  style="background-color: rgb(237,241,247);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>39</td>
+                  <td>130</td>
+                </tr>
+               
+                <tr style="background-color: rgb(247,249,252);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>24</td>
+                  <td>140</td>
+                </tr>
+                <tr style="background-color: rgb(255,255,255);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>25</td>
+                  <td>500</td>
+                </tr>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>79</td>
+                  <td>700</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+            <span>Content #2</span>
+
+
+          </nb-tab>
+
+        </nb-tabset>
+
+      </nb-card-body>
+    </nb-card>
+    
+
+
+
+    <nb-card>
+      <nb-card-body>
+    
+        <nb-tabset>
+          <nb-tab tabTitle="Pagos">
+            <table class="table table-hover">
+              <thead>
+                <tr >
+                  <th scope="col">Mes</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Monto pagado</th>
+                  <th scope="col">Total pagos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>28</td>
+                  <td>180</td>
+                </tr>
+               
+                <tr style="background-color: rgb(247,249,252);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>24</td>
+                  <td>140</td>
+                </tr>
+                <tr style="background-color: rgb(255,255,255);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>23</td>
+                  <td>130</td>
+                </tr>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>25</td>
+                  <td>150</td>
+                </tr>
+
+              </tbody>
+            </table>
+            <nav aria-label="...">
+              <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                  <span class="page-link">atras</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                  <span class="page-link">
+                    2
+                    <span class="sr-only">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">siguiente</a>
+                </li>
+              </ul>
+            </nav>
+          </nb-tab>
+
+
+
+
+
+          
+          <nb-tab tabTitle="Detalles de pago">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Mes</th>
+                  <th scope="col">Prod</th>
+                  <th scope="col">Monto</th>
+                  <th scope="col">pagos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>octubre</td>
+                  <td>seguro vehicular</td>
+                  <td>29</td>
+                  <td>100</td>
+                </tr>
+               
+                <tr style="background-color: rgb(247,249,252);">
+                  <td>noviembre</td>
+                  <td>seguro vehicular</td>
+                  <td>25</td>
+                  <td>105</td>
+                </tr>
+                <tr style="background-color: rgb(255,255,255);">
+                  <td>septiembe</td>
+                  <td>seguro vehicular</td>
+                  <td>29</td>
+                  <td>500</td>
+                </tr>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>diciembre</td>
+                  <td>seguro vehicular</td>
+                  <td>59</td>
+                  <td>105</td>
+                </tr>
+
+                
+
+              </tbody>
+
+            </table>
+
+<nav aria-label="...">
+                  <ul class="pagination justify-content-end">
+                    <li class="page-item disabled">
+                      <span class="page-link">atras</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                      <span class="page-link">
+                        2
+                        <span class="sr-only">(current)</span>
+                      </span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">siguiente</a>
+                    </li>
+                  </ul>
+                </nav>
+
+          </nb-tab>
+
+        </nb-tabset>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+
+
+
+
+
+  <div class="col-md-6">
+    <nb-card >
+      <nb-card-body>
+    
+        <nb-tabset>
+          <nb-tab tabTitle="Telefonos">
+
+            <table class="table table-hover">
+              <thead>
+                <tr >
+                  <th scope="col">Estado</th>
+                  <th scope="col">Numero</th>
+                  <th scope="col">Anexo</th>
+                  <th scope="col">Pertenencia</th>
+                  <th scope="col">Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>activo</td>
+                  <td>998293874</td>
+                  <td>anexo 1</td>
+                  <td>titula</td>
+                  <td>celular</td>
+                </tr>
+               
+                <tr style="background-color: rgb(247,249,252);">
+                  <td>activo</td>
+                  <td>992998874</td>
+                  <td>anexo 1</td>
+                  <td>titula</td>
+                  <td>fijo</td>
+                </tr>
+                <tr style="background-color: rgb(255,255,255);">
+                  <td>activo</td>
+                  <td>999893874</td>
+                  <td>anexo 1</td>
+                  <td>titula</td>
+                  <td>celular</td>
+                </tr>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>activo</td>
+                  <td>99299874</td>
+                  <td>anexo 1</td> 
+                  <td>titula</td>
+                  <td>fijo</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+            <nav aria-label="...">
+              <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                  <span class="page-link">atras</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                  <span class="page-link">
+                    2
+                    <span class="sr-only">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">siguiente</a>
+                </li>
+              </ul>
+            </nav>
+          
+          </nb-tab>
+
+          <nb-tab tabTitle="Direcciones">
+
+            <table class="table table-hover">
+              <thead>
+                <tr >
+                  <th scope="col">Estado</th>
+                  <th scope="col">Direccion</th>
+                  <th scope="col">Referencia</th>
+                  <th scope="col">Pertenencia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>activo</td>
+                  <td>av. higuereta 431</td>
+                  <td>al lado del grifo</td>
+                  <td>titular</td>
+                </tr>
+               
+                <tr style="background-color: rgb(247,249,252);">
+                  <td>activo</td>
+                  <td>av. bielich 451</td>
+                  <td>al lado del grifo</td>
+                  <td>tercero</td>
+                </tr>
+                <tr style="background-color: rgb(255,255,255);">
+                  <td>activo</td>
+                  <td>av. higuereta 435</td>
+                  <td>al lado del grifo</td>
+                  <td>titular</td>
+                </tr>
+                <tr style="background-color: rgb(237,241,247);">
+                  <td>activo</td>
+                  <td>av. bielich 531</td>
+                  <td>al lado del grifo</td>
+                  <td>titular</td>
+                </tr>
+
+              </tbody>
+            </table>
+  
+
+            <nav aria-label="...">
+              <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                  <span class="page-link">atras</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                  <span class="page-link">
+                    2
+                    <span class="sr-only">(current)</span>
+                  </span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">siguiente</a>
+                </li>
+              </ul>
+            </nav>
+
+
+          </nb-tab>
+
+        </nb-tabset>
+
+      </nb-card-body>
+    </nb-card>
+
+
+    
+      <nb-card  >
+        <nb-card-body>
+      
+          <nb-tabset>
+            <nb-tab tabTitle="Detalles de gestiones">
+
+              <form class="form-inline">
+              <p> Tipo de Gestion: </p>
+              <i class="fas fa-square" style="color: darkseagreen;margin-right: 15px;"> Entrante</i>
+              <i class="fas fa-square" style="color:firebrick;margin-right: 15px;"> Saliente</i>
+              <i class="fas fa-square" style="color:dodgerblue;"> Adicional</i>
+              </form>
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col" style="width: 120px;">Hora</th>
+                    <th scope="col">Accion</th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col">Reaccion</th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col">Razon</th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" >Observacion</th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                    <th scope="col" ></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <td>19/09/2020</td>
+                    <td >12:40 p.m.</td>
+                    <td colspan="3">Llamada sin contacto</td>
+                    <td colspan="5">Apagado malogrado y fuera de servicio</td>
+                    <td colspan="5">esto es un ejemplo de razon</td>
+                    <td  colspan="17">el cliente indica que va  a pagar la proxima semana en 3 cuotas, la primera de 150, la segunda de 200 y la tercera de 500</td>
+                  </tr>
+                  <tr class="table-success">
+                    <td>19/09/2020</td>
+                    <td >12:40 p.m.</td>
+                    <td colspan="3">Llamada  contacto</td>
+                    <td colspan="5">Apagado malogrado y fuera de servicio</td>
+                    <td colspan="5">esto es un ejemplo de razon numero 2</td>
+                    <td  colspan="17">el cliente indica que va  a pagar la proxima semana en 3 cuotas, la primera de 150, la segunda de 200 y la tercera de 500</td>
+                  </tr>
+                  <tr class="table-primary">
+                    <td>19/09/2020</td>
+                    <td >12:40 p.m.</td>
+                    <td colspan="3">Llamada sin contacto</td>
+                    <td colspan="5">Apagado malogrado y fuera de servicio</td>
+                    <td colspan="5">esto es un ejemplo de razon</td>
+                    <td  colspan="17">el cliente indica que va  a pagar la proxima semana en 3 cuotas, la primera de 150, la segunda de 200 y la tercera de 500</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <td>19/09/2020</td>
+                    <td >12:40 p.m.</td>
+                    <td colspan="3">Llamada  contacto</td>
+                    <td colspan="5">Apagado malogrado y fuera de servicio</td>
+                    <td colspan="5">esto es un ejemplo de razon numero 2</td>
+                    <td  colspan="17">el cliente indica que va  a pagar la proxima semana en 3 cuotas, la primera de 150, la segunda de 200 y la tercera de 500</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <nav aria-label="...">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item disabled">
+                    <span class="page-link">atras</span>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active">
+                    <span class="page-link">
+                      2
+                      <span class="sr-only">(current)</span>
+                    </span>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">siguiente</a>
+                  </li>
+                </ul>
+              </nav>
+
+            </nb-tab>
+
+          </nb-tabset>
+
+
+
+          <nb-tabset >
+            <nb-tab tabTitle="Promesas de pago">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha Gestion</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Fecha promesa</th>
+                    <th scope="col">Nro. cuotas</th>
+                    <th scope="col">Monto promesa</th>
+                    <th scope="col">Condicion</th>
+                    <th scope="col">Gestor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background-color: rgb(237,241,247);">
+                    <td>19/01/2020</td>
+                    <td>12:40 p.m.</td>
+                    <td>29/09/2020</td>
+                    <td>10</td>
+                    <td>1721</td>
+                    <td>ninguna</td>
+                    <td>pedro palotes</td>
+                  </tr>
+                 
+                  <tr style="background-color: rgb(247,249,252);">
+                    <td>19/09/2010</td>
+                    <td>12:40 p.m.</td>
+                    <td>29/09/2020</td>
+                    <td>10</td>
+                    <td>1713</td>
+                    <td>ninguna</td>
+                    <td>pedro palotes</td>
+                  </tr>
+                  <tr style="background-color: rgb(255,255,255);">
+                    <td>11/09/2020</td>
+                    <td>11:40 p.m.</td>
+                    <td>29/01/2020</td>
+                    <td>11</td>
+                    <td>1723</td>
+                    <td>ninguna</td>
+                    <td>pedro palotes</td>
+                  </tr>
+                  <tr style="background-color: rgb(237,241,247);">
+                    <td>11/1/2020</td>
+                    <td>12:41 p.m.</td>
+                    <td>29/09/2020</td>
+                    <td>10</td>
+                    <td>1713</td>
+                    <td>ninguna</td>
+                    <td>pedro palotes</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </nb-tab>
+
+            
+
+          </nb-tabset>
+
+
+        </nb-card-body>
+        
+      </nb-card>
+  
+      <div class=".col-6 .col-sm-4">
+      <button type="submit" nbButton status="primary" (click)="openWindowFormCopy()"><i class="fas fa-save"></i><span style="margin-left: 5px;">  Guardar </span></button>
+    
+  </div>
+</div>
+
+

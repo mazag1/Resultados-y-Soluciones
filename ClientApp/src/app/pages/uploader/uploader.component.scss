@@ -1,0 +1,176 @@
+.contenedor {
+  width: 940px;
+  background-color: white;
+  height: auto;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.contenedor1 {
+  background-color: transparent;
+  width: 940px;
+  height: auto;
+}
+
+.contenedor2 {
+  width: 940px;
+  padding: 2%;
+}
+
+.contenedor3 {
+  width: 940px;
+}
+  
+.pie{
+  width: 940px;
+}
+
+h1{
+    text-align:center;
+}
+
+#boton{
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 2%;
+}
+
+#imagen{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+#imagen img{
+width: 100%;
+}
+
+.texto_centrado{
+position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+ul{
+text-align: left;
+}
+
+// estilo de subir archivo
+
+.cajaprincipal{
+margin-top: 9%;
+height: auto;
+padding-bottom: 6px;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.cajarelleno{
+  height: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.cajatexto{
+width: 100%;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.cajatexto td{
+  border: 1px solid;
+}
+
+.plomo{
+background-color: rgb(203, 203, 211);
+}
+
+.plomos{
+background-color: rgb(48, 48, 49);
+}
+
+.primero{
+background-color: #6C75F8;
+}
+
+.primeros{
+background-color: #070F8A;
+}
+
+.segundo{
+background-color: #AAD6F7;
+}
+
+.segundos{
+background-color: #2BA0F7;
+}
+
+.tercero{
+background-color: #F56D6D;
+}
+
+.terceros{
+background-color: #EF0000;
+}
+
+.cuarto{
+background-color: #70EB79;
+}
+
+.cuartos{
+background-color: #01D912;
+}
+
+.lista{
+list-style: none;
+padding: 0;
+}
+
+
+// pagina 2
+.okmensaje{
+text-align: center;
+}
+// spinner
+.spinner-border {
+border-right-color: green;
+height: 100px;
+width: 100px;
+}
+
+h1{
+  color: black;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+.row{
+  height: 100%;
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+.alertaok{
+  position:absolute; 
+  top:14%; 
+  left:82%;
+}
+
+@media only screen and (min-width: 360px) {
+  .col-s-12 {width: 100%;}
+}
+
+
+@media only screen and (min-width: 600px) {
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-12 {width: 100%;}
+}

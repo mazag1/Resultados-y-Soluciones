@@ -42,10 +42,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Error al Subir Archivo',
         link: '/pages/errorarchivo',
       },
-      {
-        title: 'prueba',
-        link: '/pages/prueba',
-      },
     ],
   },
 ];
